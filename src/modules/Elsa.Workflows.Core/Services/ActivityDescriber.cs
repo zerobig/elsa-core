@@ -10,6 +10,7 @@ using Elsa.Workflows.Helpers;
 using Elsa.Workflows.Memory;
 using Elsa.Workflows.Models;
 using Elsa.Workflows.UIHints;
+using Microsoft.Extensions.Localization;
 using Humanizer;
 
 namespace Elsa.Workflows.Services;
@@ -21,15 +22,17 @@ public class ActivityDescriber : IActivityDescriber
     private readonly IPropertyDefaultValueResolver _defaultValueResolver;
     private readonly IActivityFactory _activityFactory;
     private readonly IPropertyUIHandlerResolver _propertyUIHandlerResolver;
+    private readonly IStringLocalizerFactory _stringLocalizerFactory;
     /// <summary>
     /// Constructor.
     /// </summary>
-    public ActivityDescriber(IPropertyDefaultValueResolver defaultValueResolver, IActivityFactory activityFactory, IPropertyUIHandlerResolver propertyUIHandlerResolver)
+    public ActivityDescriber(IPropertyDefaultValueResolver defaultValueResolver, IActivityFactory activityFactory, IPropertyUIHandlerResolver propertyUIHandlerResolver, IStringLocalizerFactory stringLocalizerFactory)
     {
         //_optionsResolver = optionsResolver;
         _defaultValueResolver = defaultValueResolver;
         _activityFactory = activityFactory;
         _propertyUIHandlerResolver = propertyUIHandlerResolver;
+        _stringLocalizerFactory = stringLocalizerFactory;
     }
 
     /// <inheritdoc />
@@ -46,6 +49,10 @@ public class ActivityDescriber : IActivityDescriber
         var category = categoryAttr?.Category ?? activityAttr?.Category ?? ActivityTypeNameHelper.GetCategoryFromNamespace(ns) ?? "Miscellaneous";
         var descriptionAttr = activityType.GetCustomAttribute<DescriptionAttribute>();
         var description = descriptionAttr?.Description ?? activityAttr?.Description;
+
+        var localizer = _stringLocalizerFactory.Create(activityType);
+        displayName = localizer[displayName];
+        if (description != null) description = localizer[description];
 
         var embeddedPorts =
             from prop in activityType.GetProperties(BindingFlags.Public | BindingFlags.Instance)
@@ -78,6 +85,19 @@ public class ActivityDescriber : IActivityDescriber
         var attributes = activityType.GetCustomAttributes(true).Cast<Attribute>().ToList();
         var outputAttribute = attributes.OfType<OutputAttribute>().FirstOrDefault();
 
+        var inputDescriptors = (await DescribeInputPropertiesAsync(inputProperties, cancellationToken)).ToList();
+        foreach (var inputDescriptor in inputDescriptors)
+        {
+            if (inputDescriptor.DisplayName != null) inputDescriptor.DisplayName = localizer[inputDescriptor.DisplayName];
+            if (inputDescriptor.Description != null) inputDescriptor.Description = localizer[inputDescriptor.Description];
+        }
+        var outputDescriptors = (await DescribeOutputPropertiesAsync(outputProperties, cancellationToken)).ToList();
+        foreach (var outputDescriptor in outputDescriptors)
+        {
+            if (outputDescriptor.DisplayName != null) outputDescriptor.DisplayName = localizer[outputDescriptor.DisplayName];
+            if (outputDescriptor.Description != null) outputDescriptor.Description = localizer[outputDescriptor.Description];
+        }
+
         var descriptor = new ActivityDescriptor
         {
             TypeName = fullTypeName,
@@ -89,8 +109,8 @@ public class ActivityDescriber : IActivityDescriber
             DisplayName = displayName,
             Kind = isTrigger ? ActivityKind.Trigger : activityAttr?.Kind ?? ActivityKind.Action,
             Ports = allPorts.ToList(),
-            Inputs = (await DescribeInputPropertiesAsync(inputProperties, cancellationToken)).ToList(),
-            Outputs = (await DescribeOutputPropertiesAsync(outputProperties, cancellationToken)).ToList(),
+            Inputs = inputDescriptors,
+            Outputs = outputDescriptors,
             IsContainer = typeof(IContainer).IsAssignableFrom(activityType),
             IsBrowsable = browsableAttr == null || browsableAttr.Browsable,
             IsStart = isStart,

@@ -123,6 +123,7 @@
         <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Http" Version="7.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Http.Polly" Version="7.0.14"/>
+        <PackageVersion Include="Microsoft.Extensions.Localization" Version="7.0.5"/>
         <PackageVersion Include="Microsoft.Extensions.Logging" Version="7.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Options" Version="7.0.1"/>
@@ -154,6 +155,7 @@
         <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Http.Polly" Version="8.0.0"/>
+        <PackageVersion Include="Microsoft.Extensions.Localization" Version="8.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Logging" Version="8.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0"/>
         <PackageVersion Include="Microsoft.Extensions.Options" Version="8.0.0"/>

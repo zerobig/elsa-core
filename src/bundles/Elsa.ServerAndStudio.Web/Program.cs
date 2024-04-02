@@ -29,6 +29,8 @@ const MassTransitBroker useMassTransitBroker = MassTransitBroker.Memory;
 
 services.Configure<MassTransitWorkflowDispatcherOptions>(massTransitSection);
 
+services.AddLocalization(options => options.ResourcesPath = "Resources");
+
 // Add Elsa services.
 services
     .AddElsa(elsa =>
@@ -124,6 +126,14 @@ services.AddRazorPages(options => options.Conventions.ConfigureFilter(new Ignore
 
 // Configure middleware pipeline.
 var app = builder.Build();
+
+var supportedCultures = new[] { "en", "ru" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
