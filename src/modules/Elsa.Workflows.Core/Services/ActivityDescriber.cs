@@ -52,6 +52,7 @@ public class ActivityDescriber : IActivityDescriber
 
         var localizer = _stringLocalizerFactory.Create(activityType);
         displayName = localizer[displayName];
+        category = localizer[category];
         if (description != null) description = localizer[description];
 
         var embeddedPorts =
