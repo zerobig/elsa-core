@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,25 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="Scheduling" xml:space="preserve">
+    <value>Планирование</value>
   </data>
-  <data name="Send Email" xml:space="preserve">
-    <value>Отправить письмо</value>
+  <data name="Timer" xml:space="preserve">
+    <value>Таймер</value>
   </data>
-  <data name="From" xml:space="preserve">
-    <value>Отправитель</value>
+  <data name="Trigger workflow execution at a specific interval." xml:space="preserve">
+    <value>Запускает выполнение рабочего процесса через определенный интервал.</value>
   </data>
-  <data name="Send an email message." xml:space="preserve">
-    <value>Отправить письмо по электронной почте.</value>
+  <data name="Interval" xml:space="preserve">
+    <value>Интервал</value>
   </data>
-  <data name="The recipients email addresses." xml:space="preserve">
-    <value>Адреса электронной почты получателей.</value>
-  </data>
-  <data name="The sender's email address." xml:space="preserve">
-    <value>Адрес электронной почты отправителя.</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>Получатель</value>
+  <data name="The interval at which the timer should execute." xml:space="preserve">
+    <value>Интервал, с которым должно выполняться действие.</value>
   </data>
 </root>

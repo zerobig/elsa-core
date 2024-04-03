@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,25 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="Scheduling" xml:space="preserve">
+    <value>Планирование</value>
   </data>
-  <data name="Send Email" xml:space="preserve">
-    <value>Отправить письмо</value>
+  <data name="Delay" xml:space="preserve">
+    <value>Пауза</value>
   </data>
-  <data name="From" xml:space="preserve">
-    <value>Отправитель</value>
+  <data name="Delay execution for the specified amount of time." xml:space="preserve">
+    <value>Задерживает выполнение на указанное время.</value>
   </data>
-  <data name="Send an email message." xml:space="preserve">
-    <value>Отправить письмо по электронной почте.</value>
+  <data name="Time Span" xml:space="preserve">
+    <value>Промежуток времени</value>
   </data>
-  <data name="The recipients email addresses." xml:space="preserve">
-    <value>Адреса электронной почты получателей.</value>
-  </data>
-  <data name="The sender's email address." xml:space="preserve">
-    <value>Адрес электронной почты отправителя.</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>Получатель</value>
+  <data name="The timespan to delay workflow execution." xml:space="preserve">
+    <value>Промежуток времени для задержки выполнения рабочего процесса.</value>
   </data>
 </root>

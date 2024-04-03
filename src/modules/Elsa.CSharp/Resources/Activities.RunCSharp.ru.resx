@@ -117,25 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="Scripting" xml:space="preserve">
+    <value>Сценарии</value>
   </data>
-  <data name="Send Email" xml:space="preserve">
-    <value>Отправить письмо</value>
+  <data name="Executes C# code" xml:space="preserve">
+    <value>Выполнить код на языке C#</value>
   </data>
-  <data name="From" xml:space="preserve">
-    <value>Отправитель</value>
+  <data name="Run C#" xml:space="preserve">
+    <value>Запустить C#</value>
   </data>
-  <data name="Send an email message." xml:space="preserve">
-    <value>Отправить письмо по электронной почте.</value>
+  <data name="Script" xml:space="preserve">
+    <value>Скрипт</value>
   </data>
-  <data name="The recipients email addresses." xml:space="preserve">
-    <value>Адреса электронной почты получателей.</value>
+  <data name="The script to run." xml:space="preserve">
+    <value>Скрипт для запуска</value>
   </data>
-  <data name="The sender's email address." xml:space="preserve">
-    <value>Адрес электронной почты отправителя.</value>
+  <data name="Possible Outcomes" xml:space="preserve">
+    <value>Возможные результаты</value>
   </data>
-  <data name="To" xml:space="preserve">
-    <value>Получатель</value>
+  <data name="A list of possible outcomes." xml:space="preserve">
+    <value>Список возможных результатов.</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,25 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="Scheduling" xml:space="preserve">
+    <value>Планирование</value>
   </data>
-  <data name="Send Email" xml:space="preserve">
-    <value>Отправить письмо</value>
+  <data name="Start at" xml:space="preserve">
+    <value>Старт с даты</value>
   </data>
-  <data name="From" xml:space="preserve">
-    <value>Отправитель</value>
+  <data name="Trigger execution at a specific time in the future." xml:space="preserve">
+    <value>Выполняет триггер в определенное время в будущем.</value>
   </data>
-  <data name="Send an email message." xml:space="preserve">
-    <value>Отправить письмо по электронной почте.</value>
-  </data>
-  <data name="The recipients email addresses." xml:space="preserve">
-    <value>Адреса электронной почты получателей.</value>
-  </data>
-  <data name="The sender's email address." xml:space="preserve">
-    <value>Адрес электронной почты отправителя.</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>Получатель</value>
+  <data name="Date Time" xml:space="preserve">
+    <value>Дата / время</value>
   </data>
 </root>

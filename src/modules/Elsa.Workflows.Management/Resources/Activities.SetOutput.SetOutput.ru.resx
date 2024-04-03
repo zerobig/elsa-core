@@ -117,25 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="Composition" xml:space="preserve">
+    <value>Композиция</value>
   </data>
-  <data name="Send Email" xml:space="preserve">
-    <value>Отправить письмо</value>
+  <data name="Assigns a given value to a the container's output." xml:space="preserve">
+    <value>Присвоить значение выходным данным контейнера.</value>
   </data>
-  <data name="From" xml:space="preserve">
-    <value>Отправитель</value>
+  <data name="Set Output" xml:space="preserve">
+    <value>Выходная переменная</value>
   </data>
-  <data name="Send an email message." xml:space="preserve">
-    <value>Отправить письмо по электронной почте.</value>
+  <data name="Output" xml:space="preserve">
+    <value>Переменная</value>
   </data>
-  <data name="The recipients email addresses." xml:space="preserve">
-    <value>Адреса электронной почты получателей.</value>
+  <data name="The output to assign." xml:space="preserve">
+    <value>Выходная переменная для назначения.</value>
   </data>
-  <data name="The sender's email address." xml:space="preserve">
-    <value>Адрес электронной почты отправителя.</value>
+  <data name="Output Value" xml:space="preserve">
+    <value>Значение переменной</value>
   </data>
-  <data name="To" xml:space="preserve">
-    <value>Получатель</value>
+  <data name="The value to assign." xml:space="preserve">
+    <value>Значение, которое нужно назначить.</value>
   </data>
 </root>
